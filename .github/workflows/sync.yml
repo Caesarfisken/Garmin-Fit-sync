@@ -20,8 +20,10 @@ jobs:
       - name: Install dependencies
         run: pip install garminconnect dropbox
 
-      - name: Write Dropbox token file
-        run: echo '${{ secrets.DROPBOX_TOKEN_JSON }}' > ~/.dropbox_refresh_token.json
+- name: Write Dropbox token file
+        run: python -c "import os,json; json.dump(json.loads(os.environ['DROPBOX_TOKEN_JSON']), open(os.path.expanduser('~/.dropbox_refresh_token.json'),'w'))"
+        env:
+          DROPBOX_TOKEN_JSON: ${{ secrets.DROPBOX_TOKEN_JSON }}
 
       - name: Run sync
         env:
