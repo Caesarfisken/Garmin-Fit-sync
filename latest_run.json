@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "activity_id": 22832231750,
+    "activity_name": "Copenhagen Running",
+    "start_time": "2026-05-10 14:00:25",
+    "device": "Garmin Forerunner 570",
+    "sensor_notes": {
+      "vertical_oscillation": "Garmin wrist \u2014 reads ~15-20mm higher than STRYD ground truth",
+      "cadence": "Reliable, cross-validated with STRYD",
+      "gct": "Garmin sensor \u2014 use for trends, STRYD for absolute values",
+      "pace_hr": "GPS pace and optical HR \u2014 reliable"
+    }
+  },
+  "athlete": {
+    "name": "Julius Schmidt",
+    "rhr_bpm": 37,
+    "mhr_bpm": 167,
+    "hrr_bpm": 130,
+    "vo2max": 57,
+    "zones": {
+      "Z1": "102-115 bpm (50-60% HRR)",
+      "Z2": "115-128 bpm (60-70% HRR)",
+      "Z3": "128-141 bpm (70-80% HRR)",
+      "Z4": "141-154 bpm (80-90% HRR)",
+      "Z5": "154-167 bpm (90-100% HRR)"
+    }
+  },
+  "overall": {
+    "total_distance_km": 0.0,
+    "avg_pace_min_km": null,
+    "avg_hr_bpm": null,
+    "avg_cadence_spm": null,
+    "avg_vo_mm_garmin": null,
+    "avg_gct_ms": null,
+    "total_laps": 0
+  },
+  "baseline_reference": {
+    "easy_pace": {
+      "pace": "4:52/km",
+      "zone": "Z1",
+      "cadence_spm": 156,
+      "gct_ms": 278,
+      "vo_mm_garmin": 102
+    },
+    "moderate_pace": {
+      "pace": "4:32/km",
+      "zone": "Z3",
+      "cadence_spm": 160,
+      "gct_ms": 266,
+      "vo_mm_garmin": 103
+    },
+    "stryd_easy": {
+      "pace": "5:06/km",
+      "cadence_spm": 150,
+      "gct_ms": 297,
+      "vo_mm_stryd": 87.5
+    },
+    "stryd_tempo": {
+      "pace": "4:21/km",
+      "cadence_spm": 159,
+      "gct_ms": 264,
+      "vo_mm_stryd": 83.4
+    },
+    "leg_spring_stiffness_kn_m": 8.8,
+    "form_power_pct": 32.2
+  },
+  "laps": []
+}
