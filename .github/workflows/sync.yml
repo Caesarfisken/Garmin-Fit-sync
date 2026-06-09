@@ -18,23 +18,23 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install garminconnect dropbox google-api-python-client google-auth
+        run: pip install garminconnect dropbox google-api-python-client google-auth google-auth-oauthlib
 
       - name: Write Dropbox token file
         env:
           DROPBOX_TOKEN_JSON: ${{ secrets.DROPBOX_TOKEN_JSON }}
         run: python -c "import os,json; json.dump(json.loads(os.environ['DROPBOX_TOKEN_JSON']), open(os.path.expanduser('~/.dropbox_refresh_token.json'),'w'))"
 
-      - name: Write Google credentials file
+      - name: Write Google OAuth token file
         env:
-          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
-        run: python -c "import os,json; json.dump(json.loads(os.environ['GOOGLE_CREDENTIALS_JSON']), open(os.path.expanduser('~/.google_credentials.json'),'w'))"
+          GOOGLE_OAUTH_TOKEN_JSON: ${{ secrets.GOOGLE_OAUTH_TOKEN_JSON }}
+        run: python -c "import os,json; json.dump(json.loads(os.environ['GOOGLE_OAUTH_TOKEN_JSON']), open(os.path.expanduser('~/.google_oauth_token.json'),'w'))"
 
       - name: Run sync
         env:
           GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
           GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
-        run: python garmin_sync_v4.py
+        run: python garmin_sync_v5.py
 
       - name: Save sync state
         uses: actions/upload-artifact@v4
