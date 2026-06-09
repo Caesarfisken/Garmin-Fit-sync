@@ -1,8 +1,8 @@
 {
   "meta": {
-    "activity_id": 23089423695,
+    "activity_id": 23112913042,
     "activity_name": "Copenhagen Running",
-    "start_time": "2026-06-01 12:10:33",
+    "start_time": "2026-06-03 09:43:43",
     "device": "Garmin Forerunner 570",
     "sensor_notes": {
       "vertical_oscillation": "Garmin wrist \u2014 reads ~15-20mm higher than STRYD ground truth",
