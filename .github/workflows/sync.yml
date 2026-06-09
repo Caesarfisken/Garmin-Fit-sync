@@ -34,7 +34,7 @@ jobs:
         env:
           GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
           GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
-        run: python garmin_sync_v5.py
+        run: python garmin_sync_v6.py
 
       - name: Save sync state
         uses: actions/upload-artifact@v4
