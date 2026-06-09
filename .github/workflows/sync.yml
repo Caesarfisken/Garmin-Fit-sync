@@ -18,7 +18,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install garminconnect dropbox google-api-python-client google-auth google-auth-oauthlib
+        run: pip install garminconnect dropbox google-api-python-client google-auth google-auth-oauthlib requests
 
       - name: Write Dropbox token file
         env:
@@ -34,7 +34,9 @@ jobs:
         env:
           GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
           GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
-        run: python garmin_sync_v6.py
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+        run: python garmin_sync_v7.py
 
       - name: Save sync state
         uses: actions/upload-artifact@v4
