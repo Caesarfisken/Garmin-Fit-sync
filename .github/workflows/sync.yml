@@ -36,7 +36,7 @@ jobs:
           GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPO: ${{ github.repository }}
-        run: python garmin_sync_v7.py
+        run: python garmin_sync_v8.py
 
       - name: Save sync state
         uses: actions/upload-artifact@v4
