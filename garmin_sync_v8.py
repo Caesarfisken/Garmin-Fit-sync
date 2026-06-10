@@ -280,9 +280,9 @@ def build_json_summary(raw_download, activity):
             "total_laps": len(laps_out)
         },
         "baseline_reference": {
-            "easy_pace":     {"pace": "4:52/km", "zone": "Z2", "cadence_spm": 156, "gct_ms": 278, "vo_mm_garmin": 102},
-            "moderate_pace": {"pace": "4:32/km", "zone": "Z3", "cadence_spm": 160, "gct_ms": 266, "vo_mm_garmin": 103},
-            "stryd_easy":    {"pace": "5:06/km", "cadence_spm": 150, "gct_ms": 297, "vo_mm_stryd": 87.5},
+            "aerobic_pace":     {"pace": "4:52/km", "zone": "Z2", "cadence_spm": 156, "gct_ms": 278, "vo_mm_garmin": 102},
+            "tempo_pace": {"pace": "4:32/km", "zone": "Z3", "cadence_spm": 160, "gct_ms": 266, "vo_mm_garmin": 103},
+            "stryd_aerobic":    {"pace": "5:06/km", "cadence_spm": 150, "gct_ms": 297, "vo_mm_stryd": 87.5},
             "stryd_tempo":   {"pace": "4:21/km", "cadence_spm": 159, "gct_ms": 264, "vo_mm_stryd": 83.4},
             "leg_spring_stiffness_kn_m": 8.8,
             "form_power_pct": 32.2
