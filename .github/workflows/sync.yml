@@ -2,7 +2,7 @@ name: Garmin FIT Sync
 
 on:
   schedule:
-    - cron: '0 6-20/2 * * *'   # 09:00 / 12:00 / 15:00 / 18:00 Copenhagen time
+    - cron: '0 6-20/2 * * *' 
   workflow_dispatch:
 
 jobs:
