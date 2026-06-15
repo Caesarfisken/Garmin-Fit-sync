@@ -221,7 +221,7 @@ def compute_record_gap(records, lap_records_list, lap_start_dists):
     # Use a 5-record rolling window for grade smoothing (reduces GPS noise)
     WINDOW = 5
     record_gaps = []
-    alts = [r.get(2, None) for r in records]
+    alts = [r.get(83, None) for r in records]  # field 83 = enhanced_altitude
     dists = [r.get(5, 0)/100 for r in records]
 
     for i in range(len(records)):
@@ -238,7 +238,7 @@ def compute_record_gap(records, lap_records_list, lap_start_dists):
         if alt_s is None or alt_e is None: continue
         dist_delta = dists[i_end] - dists[i_start]
         if dist_delta < 10: continue  # too short to compute reliable grade
-        grade_pct = ((alt_e - alt_s) / 5 / dist_delta) * 100  # /5 = altitude scale
+        grade_pct = ((alt_e - alt_s) / 100 / dist_delta) * 100  # field83/100 = metres
 
         gap = compute_gap(pace_mk, grade_pct)
         record_gaps.append((i, round(gap, 3), round(grade_pct, 2)))
@@ -297,7 +297,9 @@ def build_json_summary(raw_download, activity):
         elapsed_pace = 1000 / elapsed_spd / 60 if elapsed_spd > 0 else None
 
         # Elevation
-        altitudes = [r[2]/5 - 500 for r in recs if r.get(2, 65535) not in [65535, 0]]
+        # Field 83 = enhanced_altitude, stored in cm on Garmin Forerunner 570 -> /100 = metres
+        # Field 2  = altitude (legacy, not present on this device)
+        altitudes = [r[83]/100 for r in recs if r.get(83) not in [None, 0, 65535, 4294967295]]
         elev_gain_m = None; elev_loss_m = None; elev_net_m = None
         grade_pct = None
         if len(altitudes) >= 2:
@@ -333,14 +335,14 @@ def build_json_summary(raw_download, activity):
             if spd_raw < 500: continue
             speed_ms = spd_raw / 1000
             p = 1000 / speed_ms / 60
-            # Local grade from adjacent records
+            # Local grade from adjacent records — field 83 enhanced_altitude /100 = metres
             idx = recs.index(r)
             win = 5
             i0 = max(0, idx - win); i1 = min(len(recs)-1, idx + win)
-            a0 = recs[i0].get(2, None); a1 = recs[i1].get(2, None)
+            a0 = recs[i0].get(83, None); a1 = recs[i1].get(83, None)
             d0 = recs[i0].get(5,0)/100; d1 = recs[i1].get(5,0)/100
-            if a0 and a1 and (d1-d0) > 10:
-                g_pct = ((a1-a0)/5 / (d1-d0)) * 100
+            if a0 and a1 and a0 not in [0,65535,4294967295] and a1 not in [0,65535,4294967295] and (d1-d0) > 10:
+                g_pct = ((a1-a0)/100 / (d1-d0)) * 100
                 rec_gaps.append(compute_gap(p, g_pct))
         avg_gap_granular = round(sum(rec_gaps)/len(rec_gaps), 3) if rec_gaps else None
         avg_gap_granular_str = pace_str(avg_gap_granular) if avg_gap_granular else None
