@@ -41,6 +41,6 @@ jobs:
       - name: Save sync state
         uses: actions/upload-artifact@v4
         with:
-          name: garmin-sync-state
+          name: garmin-sync-state-${{ github.run_id }}
           path: ~/.garmin_sync_state.json
           if-no-files-found: ignore
