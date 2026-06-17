@@ -2,8 +2,12 @@ name: Garmin FIT Sync
 
 on:
   schedule:
-    - cron: '0 6,8,10,12,14,16,18,20 * * *' 
+    - cron: '0 6,8,10,12,14,16,18,20 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: garmin-sync
+  cancel-in-progress: false
 
 jobs:
   sync:
