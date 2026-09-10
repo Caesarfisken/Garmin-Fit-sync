@@ -1,7 +1,7 @@
 {
   "meta": {
     "athlete_id": "Athlete_3B974C",
-    "generated_at": "2026-09-10T06:16:45.724358",
+    "generated_at": "2026-09-10T10:48:45.657820",
     "window_days": 30,
     "note": "This file covers ALL activity types for training load context. Detailed running lap dynamics remain in latest_run.json (running only). ATL/CTL not calculated here \u2014 Garmin's native training_status and training_load_acute fields are the closest available proxies. HRV and training status may be null on dates where Garmin has no data."
   },
@@ -14,8 +14,8 @@
     {
       "date": "2026-09-10",
       "rhr_bpm": 40,
-      "calories_total": 644.0,
-      "steps": 83,
+      "calories_total": 842.0,
+      "steps": 1548,
       "hrv_avg_ms": 69,
       "hrv_status": "UNBALANCED",
       "training_status": null,
