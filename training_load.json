@@ -1,7 +1,7 @@
 {
   "meta": {
     "athlete_id": "Athlete_3B974C",
-    "generated_at": "2026-09-29T19:10:19.962259",
+    "generated_at": "2026-09-29T23:29:58.337154",
     "window_days": 30,
     "note": "This file covers ALL activity types for training load context. Detailed running lap dynamics remain in latest_run.json (running only). ATL/CTL not calculated here \u2014 Garmin's native training_status and training_load_acute fields are the closest available proxies. HRV and training status may be null on dates where Garmin has no data."
   },
@@ -14,8 +14,8 @@
     {
       "date": "2026-09-29",
       "rhr_bpm": 37,
-      "calories_total": 2606.0,
-      "steps": 9050,
+      "calories_total": 2871.0,
+      "steps": 10735,
       "hrv_avg_ms": 83,
       "hrv_status": "UNBALANCED",
       "training_status": null,
@@ -90,6 +90,11 @@
     }
   ],
   "activity_type_summary_30d": {
+    "running": {
+      "count": 12,
+      "total_duration_min": 570.5,
+      "total_distance_km": 119.11
+    },
     "indoor_cycling": {
       "count": 4,
       "total_duration_min": 175.6,
@@ -99,11 +104,6 @@
       "count": 4,
       "total_duration_min": 106.0,
       "total_distance_km": 0.0
-    },
-    "running": {
-      "count": 11,
-      "total_duration_min": 525.1,
-      "total_distance_km": 109.62
     },
     "indoor_cardio": {
       "count": 3,
@@ -122,6 +122,18 @@
     }
   },
   "all_activities_30d": [
+    {
+      "activity_id": 24546146981,
+      "activity_type": "running",
+      "start_time": "2026-09-29 20:19:44",
+      "duration_min": 45.4,
+      "distance_km": 9.49,
+      "avg_hr_bpm": 132.0,
+      "max_hr_bpm": 154.0,
+      "calories": 758.0,
+      "training_effect_aerobic": 3.4000000953674316,
+      "training_effect_anaerobic": 0.10000000149011612
+    },
     {
       "activity_id": 24522092256,
       "activity_type": "indoor_cycling",
