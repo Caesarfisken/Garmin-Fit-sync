@@ -1,7 +1,7 @@
 {
   "meta": {
     "athlete_id": "Athlete_3B974C",
-    "generated_at": "2026-10-06T23:38:36.930664",
+    "generated_at": "2026-10-07T12:48:41.477147",
     "window_days": 30,
     "note": "This file covers ALL activity types for training load context. Detailed running lap dynamics remain in latest_run.json (running only). ATL/CTL not calculated here \u2014 Garmin's native training_status and training_load_acute fields are the closest available proxies. HRV and training status may be null on dates where Garmin has no data."
   },
@@ -11,6 +11,17 @@
     "hrr_bpm": 134
   },
   "daily_health_metrics_7d": [
+    {
+      "date": "2026-10-07",
+      "rhr_bpm": 36,
+      "calories_total": 1514.0,
+      "steps": 3331,
+      "hrv_avg_ms": 87,
+      "hrv_status": "BALANCED",
+      "training_status": null,
+      "training_load_acute": null,
+      "vo2max": null
+    },
     {
       "date": "2026-10-06",
       "rhr_bpm": 36,
@@ -76,20 +87,14 @@
       "training_status": null,
       "training_load_acute": null,
       "vo2max": null
-    },
-    {
-      "date": "2026-09-30",
-      "rhr_bpm": 38,
-      "calories_total": 2293.0,
-      "steps": 1586,
-      "hrv_avg_ms": 63,
-      "hrv_status": "UNBALANCED",
-      "training_status": null,
-      "training_load_acute": null,
-      "vo2max": null
     }
   ],
   "activity_type_summary_30d": {
+    "indoor_cycling": {
+      "count": 6,
+      "total_duration_min": 247.1,
+      "total_distance_km": 104.07
+    },
     "treadmill_running": {
       "count": 1,
       "total_duration_min": 39.0,
@@ -106,14 +111,9 @@
       "total_distance_km": 15.59
     },
     "running": {
-      "count": 11,
-      "total_duration_min": 519.4,
-      "total_distance_km": 108.77
-    },
-    "indoor_cycling": {
-      "count": 5,
-      "total_duration_min": 216.9,
-      "total_distance_km": 104.07
+      "count": 10,
+      "total_duration_min": 437.9,
+      "total_distance_km": 91.65
     },
     "indoor_cardio": {
       "count": 3,
@@ -122,6 +122,18 @@
     }
   },
   "all_activities_30d": [
+    {
+      "activity_id": 24634663139,
+      "activity_type": "indoor_cycling",
+      "start_time": "2026-10-07 05:41:20",
+      "duration_min": 30.2,
+      "distance_km": null,
+      "avg_hr_bpm": 109.0,
+      "max_hr_bpm": 142.0,
+      "calories": 358.0,
+      "training_effect_aerobic": 2.0999999046325684,
+      "training_effect_anaerobic": 0.6000000238418579
+    },
     {
       "activity_id": 24621896203,
       "activity_type": "treadmill_running",
@@ -408,18 +420,6 @@
       "max_hr_bpm": 115.0,
       "calories": 126.0,
       "training_effect_aerobic": 1.0,
-      "training_effect_anaerobic": 0.0
-    },
-    {
-      "activity_id": 24258629215,
-      "activity_type": "running",
-      "start_time": "2026-09-06 12:33:19",
-      "duration_min": 81.5,
-      "distance_km": 17.12,
-      "avg_hr_bpm": 132.0,
-      "max_hr_bpm": 146.0,
-      "calories": 1410.0,
-      "training_effect_aerobic": 3.9000000953674316,
       "training_effect_anaerobic": 0.0
     }
   ]
