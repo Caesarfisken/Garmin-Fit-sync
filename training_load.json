@@ -1,7 +1,7 @@
 {
   "meta": {
     "athlete_id": "Athlete_3B974C",
-    "generated_at": "2026-10-22T11:18:13.853523",
+    "generated_at": "2026-10-22T16:47:17.185663",
     "window_days": 30,
     "note": "This file covers ALL activity types for training load context. Detailed running lap dynamics remain in latest_run.json (running only). ATL/CTL not calculated here \u2014 Garmin's native training_status and training_load_acute fields are the closest available proxies. HRV and training status may be null on dates where Garmin has no data."
   },
@@ -14,8 +14,8 @@
     {
       "date": "2026-10-22",
       "rhr_bpm": 37,
-      "calories_total": 1069.0,
-      "steps": 3791,
+      "calories_total": 2997.0,
+      "steps": 8556,
       "hrv_avg_ms": 83,
       "hrv_status": "BALANCED",
       "training_status": null,
@@ -90,6 +90,11 @@
     }
   ],
   "activity_type_summary_30d": {
+    "gravel_cycling": {
+      "count": 3,
+      "total_duration_min": 373.9,
+      "total_distance_km": 165.72
+    },
     "running": {
       "count": 9,
       "total_duration_min": 345.4,
@@ -99,11 +104,6 @@
       "count": 2,
       "total_duration_min": 118.3,
       "total_distance_km": 0.0
-    },
-    "gravel_cycling": {
-      "count": 2,
-      "total_duration_min": 238.8,
-      "total_distance_km": 100.69
     },
     "cycling": {
       "count": 2,
@@ -132,6 +132,18 @@
     }
   },
   "all_activities_30d": [
+    {
+      "activity_id": 24813692462,
+      "activity_type": "gravel_cycling",
+      "start_time": "2026-10-22 11:09:38",
+      "duration_min": 135.1,
+      "distance_km": 65.03,
+      "avg_hr_bpm": 118.0,
+      "max_hr_bpm": 157.0,
+      "calories": 1997.0,
+      "training_effect_aerobic": 4.0,
+      "training_effect_anaerobic": 2.0
+    },
     {
       "activity_id": 24802209062,
       "activity_type": "running",
