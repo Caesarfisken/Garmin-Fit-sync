@@ -1,7 +1,7 @@
 {
   "meta": {
     "athlete_id": "Athlete_3B974C",
-    "generated_at": "2026-11-14T23:42:13.554296",
+    "generated_at": "2026-11-15T13:34:18.297176",
     "window_days": 30,
     "note": "This file covers ALL activity types for training load context. Detailed running lap dynamics remain in latest_run.json (running only). ATL/CTL not calculated here \u2014 Garmin's native training_status and training_load_acute fields are the closest available proxies. HRV and training status may be null on dates where Garmin has no data."
   },
@@ -12,10 +12,21 @@
   },
   "daily_health_metrics_7d": [
     {
+      "date": "2026-11-15",
+      "rhr_bpm": 42,
+      "calories_total": 1444.0,
+      "steps": 6436,
+      "hrv_avg_ms": 43,
+      "hrv_status": "BALANCED",
+      "training_status": null,
+      "training_load_acute": null,
+      "vo2max": 56.9
+    },
+    {
       "date": "2026-11-14",
       "rhr_bpm": 37,
-      "calories_total": 2283.0,
-      "steps": 7177,
+      "calories_total": 2353.0,
+      "steps": 7405,
       "hrv_avg_ms": 89,
       "hrv_status": "BALANCED",
       "training_status": null,
@@ -76,24 +87,13 @@
       "training_status": null,
       "training_load_acute": null,
       "vo2max": null
-    },
-    {
-      "date": "2026-11-08",
-      "rhr_bpm": 39,
-      "calories_total": 2738.0,
-      "steps": 9228,
-      "hrv_avg_ms": 70,
-      "hrv_status": "BALANCED",
-      "training_status": null,
-      "training_load_acute": null,
-      "vo2max": null
     }
   ],
   "activity_type_summary_30d": {
     "running": {
-      "count": 9,
-      "total_duration_min": 422.7,
-      "total_distance_km": 86.39
+      "count": 10,
+      "total_duration_min": 458.1,
+      "total_distance_km": 92.93
     },
     "strength_training": {
       "count": 5,
@@ -132,6 +132,18 @@
     }
   },
   "all_activities_30d": [
+    {
+      "activity_id": 25083560785,
+      "activity_type": "running",
+      "start_time": "2026-11-15 09:17:15",
+      "duration_min": 35.4,
+      "distance_km": 6.54,
+      "avg_hr_bpm": 123.0,
+      "max_hr_bpm": 159.0,
+      "calories": 544.0,
+      "training_effect_aerobic": 2.799999952316284,
+      "training_effect_anaerobic": 2.4000000953674316
+    },
     {
       "activity_id": 25058626147,
       "activity_type": "running",
