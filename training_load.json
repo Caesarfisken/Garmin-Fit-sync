@@ -1,7 +1,7 @@
 {
   "meta": {
     "athlete_id": "Athlete_3B974C",
-    "generated_at": "2026-11-26T16:31:52.628873",
+    "generated_at": "2026-11-27T01:33:08.711562",
     "window_days": 30,
     "note": "This file covers ALL activity types for training load context. Detailed running lap dynamics remain in latest_run.json (running only). ATL/CTL not calculated here \u2014 Garmin's native training_status and training_load_acute fields are the closest available proxies. HRV and training status may be null on dates where Garmin has no data."
   },
@@ -11,6 +11,17 @@
     "hrr_bpm": 133
   },
   "daily_health_metrics_7d": [
+    {
+      "date": "2026-11-27",
+      "rhr_bpm": null,
+      "calories_total": null,
+      "steps": null,
+      "hrv_avg_ms": null,
+      "hrv_status": null,
+      "training_status": null,
+      "training_load_acute": null,
+      "vo2max": null
+    },
     {
       "date": "2026-11-26",
       "rhr_bpm": 39,
@@ -76,17 +87,6 @@
       "training_status": null,
       "training_load_acute": null,
       "vo2max": null
-    },
-    {
-      "date": "2026-11-20",
-      "rhr_bpm": 38,
-      "calories_total": 2859.0,
-      "steps": 8869,
-      "hrv_avg_ms": 87,
-      "hrv_status": "BALANCED",
-      "training_status": null,
-      "training_load_acute": null,
-      "vo2max": 56.8
     }
   ],
   "activity_type_summary_30d": {
@@ -96,9 +96,9 @@
       "total_distance_km": 94.94
     },
     "indoor_cycling": {
-      "count": 5,
-      "total_duration_min": 226.7,
-      "total_distance_km": 108.78
+      "count": 4,
+      "total_duration_min": 183.2,
+      "total_distance_km": 89.73
     },
     "strength_training": {
       "count": 6,
@@ -404,18 +404,6 @@
       "calories": 774.0,
       "training_effect_aerobic": 3.5,
       "training_effect_anaerobic": 2.4000000953674316
-    },
-    {
-      "activity_id": 24873987677,
-      "activity_type": "indoor_cycling",
-      "start_time": "2026-10-27 20:29:32",
-      "duration_min": 43.5,
-      "distance_km": 19.05,
-      "avg_hr_bpm": 125.0,
-      "max_hr_bpm": 149.0,
-      "calories": 760.0,
-      "training_effect_aerobic": 3.200000047683716,
-      "training_effect_anaerobic": 2.0
     }
   ]
 }
